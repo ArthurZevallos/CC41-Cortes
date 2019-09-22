@@ -8,5 +8,6 @@
 
 ###      Integrantes:
 
-. Zevallos Ccorahua, Arthur Antoni F.
+- Zevallos Ccorahua, Arthur Antoni F.
+
 
