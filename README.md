@@ -1,6 +1,6 @@
 # Complejidad Algorítmica
 
-#Trabajo Parcial
+# Trabajo Parcial
 
 Sección CC41
 
