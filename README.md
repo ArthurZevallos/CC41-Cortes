@@ -6,3 +6,7 @@
 
 ### Tema: Problema de corte y empaquetamiento 
 
+###      Integrantes:
+
+. Zevallos Ccorahua, Arthur Antoni F.
+
