@@ -9,7 +9,7 @@
 ###      Integrantes:
 
 - Zevallos Ccorahua, Arthur Antoni F.
-- Guadalpe, Luis
+- Guadalpe Carrillo, Luis Enrique
 
 ### INTRODUCCIÓN:
 
