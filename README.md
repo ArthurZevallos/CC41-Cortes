@@ -2,7 +2,7 @@
 
 ## Trabajo Parcial
 
-Sección CC41
+### Sección CC41
 
-Tema: Problema de corte y empaquetamiento 
+### Tema: Problema de corte y empaquetamiento 
 
