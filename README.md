@@ -32,11 +32,11 @@ Al finalizar el curso,el estudiante implemente distintos algoritmos para resolve
 
 ##### Objetivos Específicos:
 
-Crear algoritmos que solucione el problema de cortes y empaquetamientode con distintos métodos por integrante.
-Implementar una interfaz que le permita al usuario ingresar los datos necesarios y que el programa sea capaz de mostrar los distintos resultados o implementar la posibilidad de ueasr archivos para la carga y escritura de estos.
-Hallar la complejidad de los algoritmos propuestos.
-Generar archivos de entrada, siguiendo el formato establecido
-Analizar la eficiencia de las soluciones mediante:
-Porcentaje de desperdicio para el empaquetamiento y número de cortes (para los recortes)
-Tablas de comparación: tiempo de ejecución de algoritmo vs entrada de datos, memoria consumida por algoritmo vs entrada de datos
-Presentar conclusiones finales en función de los datos levantados en el punto anterior.
+- Crear algoritmos que solucione el problema de cortes y empaquetamientode con distintos métodos por integrante.
+- Implementar una interfaz que le permita al usuario ingresar los datos necesarios y que el programa sea capaz de mostrar los distintos resultados o implementar la posibilidad de ueasr archivos para la carga y escritura de estos.
+- Hallar la complejidad de los algoritmos propuestos.
+- Generar archivos de entrada, siguiendo el formato establecido
+- Analizar la eficiencia de las soluciones mediante:
+- Porcentaje de desperdicio para el empaquetamiento y número de cortes (para los recortes)
+- Tablas de comparación: tiempo de ejecución de algoritmo vs entrada de datos, memoria consumida por algoritmo vs entrada de datos
+- Presentar conclusiones finales en función de los datos levantados en el punto anterior.
