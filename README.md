@@ -1,2 +1,2 @@
-# CC41-Cortes-
+# CC41-Cortes
 Trabajo Parcial de Complejidad Algoritmica
