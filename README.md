@@ -24,3 +24,19 @@ Este algoritmo es una técnica de programación para realizar búsquedas sistem�
 2.	Fuerza Bruta
 Es el algoritmo más simple. Consiste en probar todas las posibles posiciones de forma exhaustiva. Ya que la fuerza bruta atravesará todas las combinaciones posibles, no toma en cuenta nada. Entonces, al considerar todo, el problema se puede salir de control, por lo que solo es lo suficientemente buena para problemas de pequeñas instancias.
 
+### OBJETIVOS:
+
+##### Objetivo General:
+
+Al finalizar el curso,el estudiante implemente distintos algoritmos para resolver problemas en contecto real sobre cortes y empaquetamiento basándose en técnicas tales como Fuerza Bruta, Divide-y-Vencerás y BackTracking.
+
+##### Objetivos Específicos:
+
+Crear algoritmos que solucione el problema de cortes y empaquetamientode con distintos métodos por integrante.
+Implementar una interfaz que le permita al usuario ingresar los datos necesarios y que el programa sea capaz de mostrar los distintos resultados o implementar la posibilidad de ueasr archivos para la carga y escritura de estos.
+Hallar la complejidad de los algoritmos propuestos.
+Generar archivos de entrada, siguiendo el formato establecido
+Analizar la eficiencia de las soluciones mediante:
+Porcentaje de desperdicio para el empaquetamiento y número de cortes (para los recortes)
+Tablas de comparación: tiempo de ejecución de algoritmo vs entrada de datos, memoria consumida por algoritmo vs entrada de datos
+Presentar conclusiones finales en función de los datos levantados en el punto anterior.
