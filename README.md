@@ -49,6 +49,6 @@ Backtraking  = n^3
 # Análisis de complejidad de Fuerza Bruta
 Fuerza bruta= n^3
 
-### CONCLUSIONES 
+### CONCLUSIONES:
 
 El problema de empaquetamiento busca que las piezas a disposición quepa de forma eficiente en la plancha al empaquetar y minimizar cortes. Este problema conocido también como problema de la mochila tiene diferentes soluciones, entre las más eficientes se requeriría un algoritmo de aproximación como el del Primer ajuste. Sin embargo, en este ocasión se intentó solucionarlo con los algoritmos Backtracking y Fuerza bruta debido al diferente orden de las piezas, restricciones del empaquetamiento y los diferentes resultados que este propone.
