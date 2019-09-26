@@ -23,28 +23,6 @@ def AreaTotal(resultado):
         sumaa+=resultado[i]
     return sumaa
 
-
-
-class Bin:
-	def __init__(self):
-		self.list = []
-
-	def addItem(self, item):
-		self.list.append(item)
-
-	def removeItem(self, item):
-		self.list.remove(item)
-
-	def sum(self):
-		total = 0
-		for elem in self.list:
-			total += elem
-		return total
-
-	def show(self):
-		return self.list
-
-
 def first_fit(list_items, max_size):
 	""" Returns list of bins with input items inside. """
 	list_bins = []

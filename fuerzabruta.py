@@ -8,8 +8,7 @@ def Area(A,H):
          par = (A[i],H[i],A[i]*H[i])
          arreglo.append(par)
         
-   return arreglo
-
+   return arregl
 
 A=[4,3,6,6,1]
 H=[3,4,3,1,1]
