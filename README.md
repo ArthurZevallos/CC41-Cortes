@@ -45,3 +45,6 @@ Es el algoritmo más simple. Consiste en probar todas las posibles posiciones de
 # Analisis de complejidad de Backtratring
 
 Backtraking  = n^3
+
+# Análisis de complejidad de Fuerza Bruta
+Fuerza bruta= n^3
