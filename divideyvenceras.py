@@ -39,13 +39,13 @@ if __name__ == '__main__':
 
     def packAndShow(aList, maxValue):
         """ Pack a list into bins and show the result """
-        print 'List with sum', sum(aList), 'requires at least', (sum(aList)+maxValue-1)/maxValue, 'bins'
+        print ("List with sum"), sum(aList), 'requires at least', (sum(aList)+maxValue-1)/maxValue, 'bins'
 
         bins = pack(aList, maxValue)
 
-        print 'Solution using', len(bins), 'bins:'
+        print ("Solution using"), len(bins), 'bins:'
         for bin in bins:
-            print bin
+            print(bin)
 
         print
 
