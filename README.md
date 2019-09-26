@@ -42,9 +42,13 @@ Este algoritmo es una técnica de programación para realizar búsquedas sistem�
 Es el algoritmo más simple. Consiste en probar todas las posibles posiciones de forma exhaustiva. Ya que la fuerza bruta atravesará todas las combinaciones posibles, no toma en cuenta nada. Entonces, al considerar todo, el problema se puede salir de control, por lo que solo es lo suficientemente buena para problemas de pequeñas instancias.
 
 
-# Analisis de complejidad de Backtratring
+# Analisis de complejidad de Backtracking
 
 Backtraking  = n^3
 
 # Análisis de complejidad de Fuerza Bruta
 Fuerza bruta= n^3
+
+### CONCLUSIONES 
+
+El problema de empaquetamiento busca que las piezas a disposición quepa de forma eficiente en la plancha al empaquetar y minimizar cortes. Este problema conocido también como problema de la mochila tiene diferentes soluciones, entre las más eficientes se requeriría un algoritmo de aproximación como el del Primer ajuste. Sin embargo, en este ocasión se intentó solucionarlo con los algoritmos Backtracking y Fuerza bruta debido al diferente orden de las piezas, restricciones del empaquetamiento y los diferentes resultados que este propone.
