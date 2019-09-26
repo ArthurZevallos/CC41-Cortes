@@ -1,5 +1,5 @@
 
-placa=[40,40,1600]
+placa=[14,14,225]
 
 
 def Area(A,H):
@@ -11,8 +11,8 @@ def Area(A,H):
    return arreglo
 
 
-A=[4,3,6,6,5]
-H=[3,4,3,1,7]
+A=[4,3,6,6,1]
+H=[3,4,3,1,1]
 
 def suma(A,placa):       
   suma=0
@@ -60,16 +60,16 @@ def llenar(arr,placa):
 
   x=0
   y=0
-
+  
   for i in range (len(arr)):
     print(arr[i][0])
-    if  (x + arr[i][0]) > xp:
+    if  (x + arr[i][0]) <= xp:
       posiciones.append((x,y,i))
       x+=arr[i][0]
-      arr.pop(i)
+      
   return posiciones
-print (A[1]+H[2])
-print (burbuja(Area(A,H)))
-print(Area(A,H))
+
+array = (burbuja(Area(A,H)))
+print(array)
 print (suma(A,placa))
-print(llenar(A,placa))
+print(llenar(array,placa))
