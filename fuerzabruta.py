@@ -47,7 +47,7 @@ def burbuja(arr):
    arreglo=[]
    for i in range (len(A)):
          par = (A[i],H[i])
-         arreglo.append(par)
+         arreglo.append(par) 
         
    return arreglo """
 
