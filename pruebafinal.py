@@ -48,10 +48,9 @@ class Bin:
 def first_fit(list_items, max_size):
 	""" Returns list of bins with input items inside. """
 	list_bins = []
-	list_bins.append(Bin()) # Add first empty bin to list
+	list_bins.append(Bin())
 
 	for item in list_items:
-		# Go through bins and try to allocate
 		alloc_flag = False
 
 		for bin in list_bins:
@@ -60,14 +59,11 @@ def first_fit(list_items, max_size):
 				alloc_flag = True
 				break
 		
-		# If item not allocated in bins in list, create new bin
-		# and allocate it to it.
 		if alloc_flag == False:
 			newBin = Bin()
 			newBin.addItem(item)
 			list_bins.append(newBin)
 
-	# Turn bins into list of items and return
 	list_items = []
 	for bin in list_bins:
 		list_items.append(bin.show())
@@ -88,7 +84,6 @@ def Planchas(G, AreaPlancha):
         nuevoVolumen -= G[i][0]
         if AreaPlancha >= nuevoVolumen:
             list_planchas1.append(G[i])
-            #list_planchas_final.append(list_planchas1)
         if AreaPlancha <= nuevoVolumen:
             list_planchas2.append(G[i])
       
@@ -115,6 +110,6 @@ print("------Cortes con su respectivo area y dimensiones------")
 print("(Area - X - Y)",MostrarAreas(G))
 print("------Cortes ordenamos-------")
 print("(Area - X - Y)",Ordenar(MostrarAreas(G)))
-print("-------Cortes en su respectiva plancha-------")
+print("------Cortes en su respectiva plancha------")
 print(Planchas(Ordenar(MostrarAreas(G)),planchaArea))
 print(Desperdicio)
