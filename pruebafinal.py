@@ -1,15 +1,20 @@
-def MostrarAreas(A,H):
-    n=len(A)
-    resultado=[]
-
-    for i in range(n):
-        producto=A[i]*H[i]
-        resultado.append(producto)
-    return resultado
+def MostrarAreas(G):
+	n=len(G)
+	resultado=[]
+	for i in range(n):
+		producto=G[i][0]*G[i][1]
+		resultado.append((producto,G[i][0],G[i][1]))
+	return resultado
 
 def Ordenar(resultado):
-    resultado.sort(reverse=True)
-    return resultado
+
+	n=len(resultado)-1
+
+	for i in range(n):
+		for j in range(n-i):
+			if resultado[j]<resultado[j+1]:
+				resultado[j],resultado[j+1]=resultado[j+1],resultado[j]
+	return resultado
     
 def AreaTotal(resultado):
     n=len(resultado)
@@ -18,46 +23,98 @@ def AreaTotal(resultado):
         sumaa+=resultado[i]
     return sumaa
 
-def Contenedores(arreglo, areaTotal):
-	#retorna una lista de placas con corte de entrada dentro
-	arregloPlancha = []
-	arregloPlancha.append(Bin()) #Agregue el primer contenedor vacío a la lista
 
-	for corte in arreglo:
-		# Ir a través de contenedores e intentar asignar
-		Añadir = False
 
-		for bin in arregloPlancha:
-			if bin.suma() + corte <= areaTotal:
-				bin.añadirPieza(corte)
-				Añadir = True
+class Bin:
+	def __init__(self):
+		self.list = []
+
+	def addItem(self, item):
+		self.list.append(item)
+
+	def removeItem(self, item):
+		self.list.remove(item)
+
+	def sum(self):
+		total = 0
+		for elem in self.list:
+			total += elem
+		return total
+
+	def show(self):
+		return self.list
+
+
+def first_fit(list_items, max_size):
+	""" Returns list of bins with input items inside. """
+	list_bins = []
+	list_bins.append(Bin()) # Add first empty bin to list
+
+	for item in list_items:
+		# Go through bins and try to allocate
+		alloc_flag = False
+
+		for bin in list_bins:
+			if bin.sum() + item <= max_size:
+				bin.addItem(item)
+				alloc_flag = True
 				break
 		
-		# Si el artículo no esta asignado en los contenedores de la lista, cree un nuevo contenedor
-		# y asignarselo
-		if Añadir == False:
-			nuevaPlancha = Bin()
-			nuevaPlancha.añadirPieza(corte)
-			arregloPlancha.append(nuevaPlancha)
+		# If item not allocated in bins in list, create new bin
+		# and allocate it to it.
+		if alloc_flag == False:
+			newBin = Bin()
+			newBin.addItem(item)
+			list_bins.append(newBin)
 
-	# Convierta los contenedores en una lista de artículos y devuélvalos
-	arreglo = []
-	for bin in arregloPlancha:
-		arreglo.append(bin.Mostrar())
+	# Turn bins into list of items and return
+	list_items = []
+	for bin in list_bins:
+		list_items.append(bin.show())
 
-	return(arreglo)
+	return(list_items)
 
 def Desperdicio():
-    resultado=100-((AreaTotal(MostrarAreas(A,H))/planchaArea)*100)
+    resultado=100-((AreaTotal(MostrarAreas(G))/planchaArea)*100)
     return resultado
 
-A=[4,5,6,7]
-H=[1,2,3,4]
-planchaArea=200
+def Planchas(G, AreaPlancha):
+    n = len(G) 
+    list_planchas1 = []
+    list_planchas2 = []
+    list_planchas_final = []
+    for i in range(n):
+        nuevoVolumen = AreaPlancha 
+        nuevoVolumen -= G[i][0]
+        if AreaPlancha >= nuevoVolumen:
+            list_planchas1.append(G[i])
+            #list_planchas_final.append(list_planchas1)
+        if AreaPlancha <= nuevoVolumen:
+            list_planchas2.append(G[i])
+      
+    '''print("hola",list_planchas1)
+    print(list_planchas_final)
+        
+    for i in range(n):
+        nuevoVolumen = AreaPlancha 
+        nuevoVolumen -= G[i][0]
+        if AreaPlancha >= nuevoVolumen:
+            list_planchas2.append(G[i])'''
+       
+    list_planchas_final.append(list_planchas1)
+    list_planchas_final.append(list_planchas2)
+    return list_planchas_final
 
-'''resultado=Contenedores(Ordenar(MostrarAreas(A,H)),planchaArea)
-print(resultado)
-nroCortes=len(resultado)
-print("Los numeros de cortes son: ",nroCortes)'''
-print(AreaTotal(MostrarAreas(A,H)))
-print(Desperdicio(),"%")
+G=[(15,16),(11,13),(8,9),(5,6),(8,20)]
+planchaAncho = 300
+planchaAlto = 200
+planchaArea = planchaAncho*planchaAlto
+print("----- Cortes------")
+print("X - Y",G)
+print("------Cortes con su respectivo area y dimensiones------")
+print("(Area - X - Y)",MostrarAreas(G))
+print("------Cortes ordenamos-------")
+print("(Area - X - Y)",Ordenar(MostrarAreas(G)))
+print("-------Cortes en su respectiva plancha-------")
+print(Planchas(Ordenar(MostrarAreas(G)),planchaArea))
+print(Desperdicio)
