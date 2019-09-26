@@ -50,5 +50,5 @@ def first_fit(list_items, max_size):
 items = [8, 16, 12, 8, 45, 18, 30, 7, 10, 14, 9, 9, 52, 88]
 bin_height = 60
 
-# First-fit Algorithmmm
+# First-fit Algorithm
 print(first_fit(items, bin_height))
