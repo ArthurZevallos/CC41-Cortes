@@ -1,54 +1,63 @@
-class Bin:
-	def __init__(self):
-		self.list = []
+def MostrarAreas(A,H):
+    n=len(A)
+    resultado=[]
 
-	def addItem(self, item):
-		self.list.append(item)
+    for i in range(n):
+        producto=A[i]*H[i]
+        resultado.append(producto)
+    return resultado
 
-	def removeItem(self, item):
-		self.list.remove(item)
+def Ordenar(resultado):
+    resultado.sort(reverse=True)
+    return resultado
+    
+def AreaTotal(resultado):
+    n=len(resultado)
+    sumaa=0
+    for i in range(n):
+        sumaa+=resultado[i]
+    return sumaa
 
-	def sum(self):
-		total = 0
-		for elem in self.list:
-			total += elem
-		return total
+def Contenedores(arreglo, areaTotal):
+	#retorna una lista de placas con corte de entrada dentro
+	arregloPlancha = []
+	arregloPlancha.append(Bin()) #Agregue el primer contenedor vacío a la lista
 
-	def show(self):
-		return self.list
+	for corte in arreglo:
+		# Ir a través de contenedores e intentar asignar
+		Añadir = False
 
-
-def first_fit(list_items, max_size):
-	""" Returns list of bins with input items inside. """
-	list_bins = []
-	list_bins.append(Bin()) # Add first empty bin to list
-
-	for item in list_items:
-		# Go through bins and try to allocate
-		alloc_flag = False
-
-		for bin in list_bins:
-			if bin.sum() + item <= max_size:
-				bin.addItem(item)
-				alloc_flag = True
+		for bin in arregloPlancha:
+			if bin.suma() + corte <= areaTotal:
+				bin.añadirPieza(corte)
+				Añadir = True
 				break
 		
-		# If item not allocated in bins in list, create new bin
-		# and allocate it to it.
-		if alloc_flag == False:
-			newBin = Bin()
-			newBin.addItem(item)
-			list_bins.append(newBin)
+		# Si el artículo no esta asignado en los contenedores de la lista, cree un nuevo contenedor
+		# y asignarselo
+		if Añadir == False:
+			nuevaPlancha = Bin()
+			nuevaPlancha.añadirPieza(corte)
+			arregloPlancha.append(nuevaPlancha)
 
-	# Turn bins into list of items and return
-	list_items = []
-	for bin in list_bins:
-		list_items.append(bin.show())
+	# Convierta los contenedores en una lista de artículos y devuélvalos
+	arreglo = []
+	for bin in arregloPlancha:
+		arreglo.append(bin.Mostrar())
 
-	return(list_items)
+	return(arreglo)
 
-items = [8, 16, 12, 8, 45, 18, 30, 7, 10, 14, 9, 9, 52, 88]
-bin_height = 60
+def Desperdicio():
+    resultado=100-((AreaTotal(MostrarAreas(A,H))/planchaArea)*100)
+    return resultado
 
-# First-fit Algorithm
-print(first_fit(items, bin_height))
+A=[4,5,6,7]
+H=[1,2,3,4]
+planchaArea=200
+
+'''resultado=Contenedores(Ordenar(MostrarAreas(A,H)),planchaArea)
+print(resultado)
+nroCortes=len(resultado)
+print("Los numeros de cortes son: ",nroCortes)'''
+print(AreaTotal(MostrarAreas(A,H)))
+print(Desperdicio(),"%")
