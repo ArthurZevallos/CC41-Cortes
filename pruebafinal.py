@@ -23,7 +23,7 @@ def AreaTotal(resultado):
         sumaa+=resultado[i]
     return sumaa
 
-def first_fit(list_items, max_size):
+'''def first_fit(list_items, max_size):
 	""" Returns list of bins with input items inside. """
 	list_bins = []
 	list_bins.append(Bin())
@@ -47,7 +47,7 @@ def first_fit(list_items, max_size):
 		list_items.append(bin.show())
 
 	return(list_items)
-
+'''
 def Desperdicio():
     resultado=100-((AreaTotal(MostrarAreas(G))/planchaArea)*100)
     return resultado
