@@ -47,8 +47,8 @@ Es el algoritmo más simple. Consiste en probar todas las posibles posiciones de
 Backtraking  = n^3
 
 # Análisis de complejidad de Fuerza Bruta
-Fuerza bruta= n^3
+Fuerza bruta= O(n)  en el peor de los casos O(n^2)
 
 ### CONCLUSIONES:
 
-El problema de empaquetamiento busca que las piezas a disposición quepa de forma eficiente en la plancha al empaquetar y minimizar cortes. Este problema conocido también como problema de la mochila tiene diferentes soluciones, entre las más eficientes se requeriría un algoritmo de aproximación como el del Primer ajuste. Sin embargo, en este ocasión se intentó solucionarlo con los algoritmos Backtracking y Fuerza bruta debido al diferente orden de las piezas, restricciones del empaquetamiento y los diferentes resultados que este propone.
+El problema de Bin Packing en 3D busca que las piezas a disposición quepa de forma eficiente en un contenedor al momento de almacenar las piezas el espacio utiliazdo. Este problema conocido también como problema de la mochila tiene diferentes soluciones, entre las más eficientes se requeriría un algoritmo de aproximación como el del Primer ajuste. Sin embargo, en este ocasión se intentó solucionarlo con los algoritmos Backtracking y Fuerza bruta debido al diferente orden de las piezas, restricciones del empaquetamiento y los diferentes resultados que este propone.
