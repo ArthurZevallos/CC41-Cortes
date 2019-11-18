@@ -42,9 +42,6 @@ Este algoritmo es una técnica de programación para realizar búsquedas sistem�
 Es el algoritmo más simple. Consiste en probar todas las posibles posiciones de forma exhaustiva. Ya que la fuerza bruta atravesará todas las combinaciones posibles, no toma en cuenta nada. Entonces, al considerar todo, el problema se puede salir de control, por lo que solo es lo suficientemente buena para problemas de pequeñas instancias.
 
 
-# Analisis de complejidad de Backtracking
-
-Backtraking  = n^3
 
 # Análisis de complejidad de Fuerza Bruta
 Fuerza bruta= O(n)  en el peor de los casos O(n^2)
